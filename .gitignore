@@ -1,7 +1,10 @@
-data/
+data/*
 __pycache__/
 .ipynb_checkpoints/
 weights/
 *.pyc
 plots/
 *.h5
+!data/*.md
+!data/*.sh
+!data/*.py
