@@ -40,3 +40,8 @@
 ##### 0.0.2 (feature)
 - Added code to extract tf record.
 - Added code to generate pseudo masks for the image dataset using SAM.
+
+##### 0.0.3 (bug + bugfix)
+- The conversion code for tf record is not working properly. -> BUG
+- Added script for downloading the model checkpoints.
+- Made path changes in generate_pseudo_masks.sh file.
