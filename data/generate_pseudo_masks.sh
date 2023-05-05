@@ -1,1 +1,1 @@
-python /home/aghosh57/Kerner-Lab/slice/models/segment-anything/scripts/amg.py --checkpoint /home/aghosh57/Kerner-Lab/slice/models/segment-anything/chk_pts/sam_vit_h.pth --model-type default --input input_images/ --output output_images/
+python ../models/segment-anything/scripts/amg.py --checkpoint ../models/segment-anything/chkpts/sam_vit_h.pth --model-type default --input input_images/dummy/ --output output_images/
