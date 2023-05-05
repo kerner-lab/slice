@@ -36,3 +36,7 @@
 ##### 0.0.1 (feature + bugfix)
 - Added Segment Anything Project as a submodule.
 - Fixed and issue with the setup_sol.sh file.
+
+##### 0.0.2 (feature)
+- Added code to extract tf record.
+- Added code to generate pseudo masks for the image dataset using SAM.
