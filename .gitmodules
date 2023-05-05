@@ -1,3 +1,3 @@
 [submodule "models/segment-anything"]
 	path = models/segment-anything
-	url = https://github.com/aninda-ghosh/segment-anything
+	url = https://github.com/facebookresearch/segment-anything
