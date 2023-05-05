@@ -1,0 +1,1 @@
+python ../models/segment-anything/scripts/amg.py --checkpoint ../models/segment-anything/chkpts/sam_vit_h.pth --model-type default --input input_images/dummy/ --output output_images/
