@@ -50,3 +50,6 @@
 - Conversion for TFrecord
 - Extract images script for inference
 - Output visualization script .ipynb
+
+##### 0.0.5 (feature)
+- Working with the combine patches for display. The patches(masks) are generated as separate files (instances) 
