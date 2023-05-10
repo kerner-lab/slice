@@ -45,3 +45,8 @@
 - The conversion code for tf record is not working properly. -> BUG
 - Added script for downloading the model checkpoints.
 - Made path changes in generate_pseudo_masks.sh file.
+
+##### 0.0.4 (feature + bugfix)
+- Conversion for TFrecord
+- Extract images script for inference
+- Output visualization script .ipynb
