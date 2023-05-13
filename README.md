@@ -50,3 +50,6 @@
 - Conversion for TFrecord
 - Extract images script for inference
 - Output visualization script .ipynb
+
+##### 0.0.5 (feature)
+- Dataset creating script added to data.ipynb
