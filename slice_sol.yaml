@@ -325,4 +325,4 @@ dependencies:
       - websockets==11.0.2
       - yarl==1.9.2
       - zipp==3.15.0
-prefix: /home/mcsatish/.conda/envs/slice
+prefix: ~/.conda/envs/slice
