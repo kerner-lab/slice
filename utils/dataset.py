@@ -32,8 +32,7 @@ class ParcelDataset(Dataset):
             path (string): Path to the folder containing the dataset.
         """
         self.path = path
-        # FIXME: Change this before pushing
-        self.data = gpd.read_file(path + "parcel_data1.geojson") 
+        self.data = gpd.read_file(path + "parcel_data.geojson") 
         self.images, self.labels = self._get_image_and_pixel_masks(self.data)
         self.length = len(self.data)
         
@@ -47,10 +46,17 @@ class ParcelDataset(Dataset):
         image_path = self.images[idx]
         label = self.labels[idx]
         
-        image = cv2.imread(image_path)
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        # Handle the case where the idx is list
+        if isinstance(image_path, str):
+            image_path = [image_path]
+                
+        all_images = []
+        for path in image_path:
+            image = cv2.imread(path)
+            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+            all_images.append(image)
             
-        return image, label
+        return np.array(all_images), np.array(label, dtype=object)
 
 
     def _get_image_and_pixel_masks(self, parcel_data, size=(224, 224)):
@@ -125,5 +131,4 @@ class ParcelDataset(Dataset):
 
 if __name__ == '__main__':
     dataset = ParcelDataset(path='data/france/dataset_chunk/')
-    idx = 123
-    print(dataset[idx][0].shape, dataset[idx][1].shape)
+    print(len(dataset))
