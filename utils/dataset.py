@@ -46,7 +46,7 @@ class ParcelDataset(Dataset):
         image_path = self.images[idx]
         label = self.labels[idx]
         
-        # Handle the case where the idx is list
+        # Handle the case where the idx is not a list
         if isinstance(image_path, str):
             image_path = [image_path]
                 

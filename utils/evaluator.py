@@ -8,9 +8,8 @@ The script is used to calculate the following metrics:
 """
 
 import numpy as np
-import torch
-import torch.nn.functional as F
 from tqdm import tqdm
+from scipy.optimize import linear_sum_assignment
 
 def calculate_iou(pred_mask, gt_mask):
     """Calculate IoU for a single predicted and ground truth mask.

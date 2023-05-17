@@ -12,11 +12,10 @@ parser.add_argument("--model-type", type=str, default="default", required=True, 
 parser.add_argument("--checkpoint", type=str, default="weights/sam_vit_h.pth", required=True, help="The path to the SAM checkpoint to use for mask generation.", )
 parser.add_argument("--device", type=str, default="cuda", help="The device to run generation on.")
 
-def parse_masks(masks: List[Dict[str, Any]], path: str) -> Dict:
+def parse_masks(masks: List[Dict[str, Any]]) -> Dict:
     """Parse the masks into a dictionary.
     Args:
         masks: The masks to parse.
-        path: The path to the image that the masks were generated for.
     Returns:
         A dictionary containing the parsed masks.
     """
@@ -60,9 +59,12 @@ def main(args: argparse.Namespace) -> None:
     # Generate the mask
     masks = generator.generate(image)
 
+    # Parse the masks
+    parsed_masks = parse_masks(masks, dataset.image_paths[0])
 
 if __name__ == "__main__":
     args = parser.parse_args()
     main(args)
     
     
+# Add new row to df
