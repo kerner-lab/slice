@@ -9,3 +9,4 @@ plots/
 !data/*.sh
 !data/*.py
 !data/*.ipynb
+!data/tools/
