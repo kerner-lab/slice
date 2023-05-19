@@ -53,3 +53,7 @@
 
 ##### 0.0.5 (feature)
 - Dataset creating script added to data.ipynb
+
+##### 0.0.7 (feature + bugfix + update)
+- The Dataset loader is now available.
+- A Visualization notebook is available. See [infer_and_eval.ipynb](infer_and_eval.ipynb)
