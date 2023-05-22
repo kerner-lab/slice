@@ -26,14 +26,14 @@ class ParcelDataset(Dataset):
     The labels are stored in boolean masks. The masks are stored in a list.
     """
     
-    def __init__(self, path):
+    def __init__(self, path, size=(224, 224)):
         """
         Args:
             path (string): Path to the folder containing the dataset.
         """
         self.path = path
         self.data = gpd.read_file(path + "parcel_data.geojson") 
-        self.images, self.labels = self._get_image_and_pixel_masks(self.data)
+        self.images, self.labels = self._get_image_and_pixel_masks(self.data, size=size)
         self.length = len(self.data)
         
     def __len__(self):
