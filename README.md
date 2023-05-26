@@ -8,6 +8,34 @@
 
 ---
 
+### Usage
+
+- Perform a Recursive git clone 
+  ``` 
+  git clone --recursive git@github.com:kerner-lab/slice.git 
+  ```
+
+- Change a code in Transformers library under models folder
+    - Path 
+    slice/models/transformers/src/transformers/models/sam/image_processing_sam.py
+
+    - Modification
+    ```
+    Line 938 :  (Error)
+    crop_boxes = crop_boxes.astype(np.float32)
+
+    should work with
+    crop_boxes = np.array(crop_boxes, dtype=np.float32)
+    ```
+
+    - Perform installation for Transformers library
+    ```
+    pip install -e .
+    ```
+
+---
+
+
 ### Guidelines
 
 - Following semantic versioning with ```Major.Minor.Patch```
@@ -53,3 +81,15 @@
 
 ##### 0.0.5 (feature)
 - Working with the combine patches for display. The patches(masks) are generated as separate files (instances) 
+
+##### 0.0.6 (feature)
+- Dataset creating script added to data.ipynb
+
+##### 0.0.7 (feature + bugfix + update)
+- The Dataset loader is now available.
+- A Visualization notebook is available. See [infer_and_eval.ipynb](infer_and_eval.ipynb)
+
+##### 0.1.0 (feature)
+- Added Transformers Library from HuggingFace
+- Recreated Inference Pipeline for better understanding and decoupling it from the HuggingFace internal Pipeline.
+- WIP for training script. 
