@@ -1,1 +1,1 @@
-python ../models/segment-anything/scripts/amg.py --checkpoint ../models/segment-anything/chkpts/sam_vit_h.pth --model-type default --input input_images/dummy/ --output output_images/
+python ../models/segment-anything/scripts/amg.py --checkpoint ../models/segment-anything/chkpts/sam_vit_l.pth --model-type vit_l --input input_images/planetscope/p2/ --output input_images/planetscope/p2/patches/

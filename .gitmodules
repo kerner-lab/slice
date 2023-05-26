@@ -1,3 +1,6 @@
 [submodule "models/segment-anything"]
 	path = models/segment-anything
 	url = https://github.com/facebookresearch/segment-anything
+[submodule "models/transformers"]
+	path = models/transformers
+	url = https://github.com/huggingface/transformers
