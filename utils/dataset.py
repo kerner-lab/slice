@@ -1,13 +1,8 @@
 import torch
-import torchvision
-import torchvision.transforms as transforms
 import numpy as np
-import matplotlib.pyplot as plt
-import os
 import cv2
-import sys
 import geopandas as gpd
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset
 
 class ParcelDataset(Dataset):
     """Parcel dataset
@@ -20,6 +15,8 @@ class ParcelDataset(Dataset):
                 - xxxxx.png
                 - xxxxx.geojson
                 - ...
+                - ...
+                - parcel_data.geojson
 
     The labels is loaded using the `geopandas` library.
     The images are loaded using the `matplotlib.pyplot` module.
