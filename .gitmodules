@@ -1,6 +1,6 @@
-[submodule "models/segment-anything"]
-	path = models/segment-anything
-	url = https://github.com/facebookresearch/segment-anything
-[submodule "models/transformers"]
-	path = models/transformers
-	url = https://github.com/huggingface/transformers
+[submodule "models/maskrcnn-rpn"]
+	path = models/maskrcnn-rpn
+	url = https://github.com/aninda-ghosh/maskrcnn-rpn
+[submodule "models/SAT-SAM"]
+	path = models/SAT-SAM
+	url = https://github.com/aninda-ghosh/SAT-SAM
