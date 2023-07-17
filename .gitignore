@@ -5,6 +5,9 @@ weights/
 *.pyc
 plots/
 *.h5
+*.png
+*.geojson
+*.txt
 !data/*.md
 !data/*.sh
 !data/*.py
